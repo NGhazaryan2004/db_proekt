@@ -1,0 +1,3 @@
+CREATE DATABASE geography_db;
+CREATE USER Narek WITH PASSWORD '1234';
+ALTER DATABASE geography_db OWNER TO Narek;
