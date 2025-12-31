@@ -1,3 +1,6 @@
 CREATE DATABASE geography_db;
-CREATE USER Narek WITH PASSWORD '1234';
-ALTER DATABASE geography_db OWNER TO Narek;
+CREATE USER geo_admin WITH PASSWORD 'geo_pass';
+GRANT ALL PRIVILEGES ON DATABASE geography_db TO geo_admin;
+
+\c geography_db;
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
