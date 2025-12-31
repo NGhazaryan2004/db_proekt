@@ -5,7 +5,14 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from app.models import Base
+import sys
+import os
+from os.path import sorted, join, abspath, dirname
+
+
+sys.path.insert(0, abspath(join(dirname(__file__), '..')))
+
+from app.models import Base 
 target_metadata = Base.metadata
 
 # this is the Alembic Config object, which provides
